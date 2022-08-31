@@ -1,0 +1,255 @@
+$color1: blueviolet
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Nunito Sans', sans-serif
+
+.logoHeader 
+    width: 60px
+    height: 60px
+
+.header
+    padding: 12px
+    width: 100%
+    font-size: 20px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background-image: linear-gradient(to right, white, #f9c4db)
+
+.navBar
+    float: right
+
+    li 
+        display: inline-block
+        margin-right: 20px
+
+.navBar a:hover
+    color: $color1
+
+.searchIcon
+    width: 20px
+    height: 20px
+
+.linksToPages
+    text-decoration: none
+    color: #FF006E
+
+.main 
+    min-height: calc(100vh - 100px - 300px)
+
+.mainDiv 
+    text-align: center
+    background-color: antiquewhite
+    padding-bottom: 15px
+
+    h1
+        font-size: 160px
+        font-weight: 900
+        color: #FF006E
+
+    h3
+        color: #FF006E
+        margin-bottom: 15px
+
+    p 
+        margin: 50px 150px
+        color: rgb(249, 141, 0)
+
+.subtitleMainDiv
+    font-size: 25px
+    color: #FF006E
+    margin-bottom: 25px
+    text-align: center
+
+.mainImg
+    width: 100%
+
+.pictures 
+    background-color: #fec4dd
+    padding: 20px
+
+h1 
+    font-size: 45px
+    color: #FF006E
+    margin: 0px 15px
+    text-align: center
+
+h3 
+    font-size: 45px
+    color: rgb(157, 69, 240)
+
+.containerPictures 
+    width: 100%
+    padding: 15px
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-template-rows: repeat(2, 600px)
+    grid-gap: 15px
+
+.item 
+    box-shadow: 3px 3px #af778f
+
+.item1 
+    background-image: url(../imgs/bb_beach.avif)
+    background-position: center
+    background-size: cover
+    grid-column: 1/3
+
+.item2 
+    background-image: url(../imgs/bb_bucketHat.jfif)
+    background-position: center
+    background-size: cover
+
+.item3 
+    background-image: url(../imgs/bb_sunglasses.jpg)
+    background-position: center
+    background-size: cover
+    grid-column: 4/5
+    grid-row: 1/3
+
+.item4 
+    background-image: url(../imgs/bb_facingCamera.jpg)
+    background-position: center
+    background-size: cover
+
+.item5 
+    background-image: url(../imgs/bb_pinkShow.webp)
+    background-position: center
+    background-size: cover
+
+.item6 
+    background-image: url(../imgs/bb_selfie.jpg)
+    background-position: center
+    background-size: cover
+
+.multimedia
+    padding: 20px
+    background-color: beige
+
+.musicVideo
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    padding: 15px 0px
+
+    p
+        width: 250px
+        color: $color1
+
+.moreInfoCTAs
+    padding: 45px 0px
+    background-color: #fbd2e3
+    display: flex
+    justify-content: space-evenly
+
+.CTAs
+    padding: 12px 35px
+    border-radius: 7px
+    background-color: rgb(196, 249, 231)
+    border: 1px solid #FF006E
+    color: #FF006E
+    font-size: 18px
+    cursor: pointer
+    transition-duration: 0.4s
+
+.CTAs:hover 
+    background-color: rgb(203, 158, 245)
+    color: white
+
+footer
+    padding: 45px 0px
+    background-color: rgb(196, 249, 231)
+
+.socialMedia
+    display: flex
+    justify-content: space-around
+
+.iconsSM
+    text-decoration: none
+    color: #FF006E
+    font-size: 25px
+
+.footerText
+    color: #FF006E
+    display: flex
+    justify-content: center
+    padding-top: 20px
+
+    p
+        padding-left: 20px
+
+
+.sectionsMainDiv
+    text-align: center
+    background-color: antiquewhite
+    padding: 20px 0px
+
+    p
+        margin: 0px 250px
+        color: rgb(58, 83, 74)
+        padding-top: 50px
+        padding-bottom: 100px
+
+.showsImgs
+    width: 250px
+    height: 250px
+    border-radius: 10px
+
+.showsImgsDiv
+    padding: 20px 0px
+    display: flex
+    justify-content: space-evenly
+
+
+@media only screen and (max-width: 768px) 
+    .navBar li 
+        display: block
+    
+    .mainDiv 
+        padding: 15px
+    
+        h1
+            font-size: 50px
+    
+        p 
+            margin: 15px 25px
+    
+    .containerPictures 
+        display: block
+    
+    .item 
+        width: 100%
+        height: 150px
+        margin: 25px 0px
+    
+    .musicVideo
+        display: block
+    
+        iframe
+            width: 100%
+    
+        p
+            text-align: center
+            width: 100%
+    
+    .moreInfoCTAs
+        display: flex
+        flex-direction: column
+        align-items: center
+    
+    .CTAs
+        margin-bottom: 15px
+    
+    .sectionsMainDiv p
+        margin: 0px 20px
+    
+    .showsImgsDiv
+        display: block
+    
+    .showsImgs
+        width: 50%
+        height: auto
+    
