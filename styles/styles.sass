@@ -1,4 +1,5 @@
-$color1: blueviolet
+$colorBlueViolet: blueviolet
+$colorFuxia: #FF006E
 
 *
     margin: 0
@@ -27,7 +28,7 @@ $color1: blueviolet
         margin-right: 20px
 
 .navBar a:hover
-    color: $color1
+    color: $colorBlueViolet
 
 .searchIcon
     width: 20px
@@ -35,7 +36,7 @@ $color1: blueviolet
 
 .linksToPages
     text-decoration: none
-    color: #FF006E
+    color: $colorFuxia
 
 .main 
     min-height: calc(100vh - 100px - 300px)
@@ -48,10 +49,10 @@ $color1: blueviolet
     h1
         font-size: 160px
         font-weight: 900
-        color: #FF006E
+        color: $colorFuxia
 
     h3
-        color: #FF006E
+        color: $colorFuxia
         margin-bottom: 15px
 
     p 
@@ -60,7 +61,7 @@ $color1: blueviolet
 
 .subtitleMainDiv
     font-size: 25px
-    color: #FF006E
+    color: $colorFuxia
     margin-bottom: 25px
     text-align: center
 
@@ -73,7 +74,7 @@ $color1: blueviolet
 
 h1 
     font-size: 45px
-    color: #FF006E
+    color: $colorFuxia
     margin: 0px 15px
     text-align: center
 
@@ -92,38 +93,32 @@ h3
 .item 
     box-shadow: 3px 3px #af778f
 
-.item1 
-    background-image: url(../imgs/bb_beach.avif)
-    background-position: center
-    background-size: cover
+@mixin background-image($background-image, $background-position, $background-size)
+    background-image: $background-image
+    background-position: $background-position
+    background-size: $background-size
+
+
+.item1
+    @include background-image(url(../imgs/bb_beach.avif), center, cover)
     grid-column: 1/3
 
 .item2 
-    background-image: url(../imgs/bb_bucketHat.jfif)
-    background-position: center
-    background-size: cover
+    @include background-image(url(../imgs/bb_bucketHat.jfif), center, cover)
 
 .item3 
-    background-image: url(../imgs/bb_sunglasses.jpg)
-    background-position: center
-    background-size: cover
+    @include background-image(url(../imgs/bb_sunglasses.jpg), center, cover)
     grid-column: 4/5
     grid-row: 1/3
 
 .item4 
-    background-image: url(../imgs/bb_facingCamera.jpg)
-    background-position: center
-    background-size: cover
+    @include background-image(url(../imgs/bb_facingCamera.jpg), center, cover)
 
 .item5 
-    background-image: url(../imgs/bb_pinkShow.webp)
-    background-position: center
-    background-size: cover
+    @include background-image(url(../imgs/bb_pinkShow.webp), center, cover)
 
 .item6 
-    background-image: url(../imgs/bb_selfie.jpg)
-    background-position: center
-    background-size: cover
+    @include background-image(url(../imgs/bb_selfie.jpg), center, cover)
 
 .multimedia
     padding: 20px
@@ -137,7 +132,7 @@ h3
 
     p
         width: 250px
-        color: $color1
+        color: $colorBlueViolet
 
 .moreInfoCTAs
     padding: 45px 0px
@@ -149,8 +144,8 @@ h3
     padding: 12px 35px
     border-radius: 7px
     background-color: rgb(196, 249, 231)
-    border: 1px solid #FF006E
-    color: #FF006E
+    border: 1px solid $colorFuxia
+    color: $colorFuxia
     font-size: 18px
     cursor: pointer
     transition-duration: 0.4s
@@ -167,13 +162,18 @@ footer
     display: flex
     justify-content: space-around
 
-.iconsSM
-    text-decoration: none
-    color: #FF006E
-    font-size: 25px
+$redes: ("youtube": $colorBlueViolet, "instagram": $colorFuxia, "facebook": white, "spotify": rgb(249, 141, 0), "tiktok": rgb(203, 158, 245), "twitter": pink)
+
+@each $redSocial, $color in $redes
+    .iconsSM-#{$redSocial}
+        text-decoration: none
+        color: $color
+        font-size: 25px
+    .iconsSM-#{$redSocial}:hover
+        font-size: 40px
 
 .footerText
-    color: #FF006E
+    color: $colorFuxia
     display: flex
     justify-content: center
     padding-top: 20px

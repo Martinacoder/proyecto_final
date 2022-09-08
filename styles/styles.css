@@ -194,10 +194,64 @@ footer {
   justify-content: space-around;
 }
 
-.iconsSM {
+.iconsSM-youtube {
+  text-decoration: none;
+  color: blueviolet;
+  font-size: 25px;
+}
+
+.iconsSM-youtube:hover {
+  font-size: 40px;
+}
+
+.iconsSM-instagram {
   text-decoration: none;
   color: #FF006E;
   font-size: 25px;
+}
+
+.iconsSM-instagram:hover {
+  font-size: 40px;
+}
+
+.iconsSM-facebook {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+}
+
+.iconsSM-facebook:hover {
+  font-size: 40px;
+}
+
+.iconsSM-spotify {
+  text-decoration: none;
+  color: rgb(249, 141, 0);
+  font-size: 25px;
+}
+
+.iconsSM-spotify:hover {
+  font-size: 40px;
+}
+
+.iconsSM-tiktok {
+  text-decoration: none;
+  color: rgb(203, 158, 245);
+  font-size: 25px;
+}
+
+.iconsSM-tiktok:hover {
+  font-size: 40px;
+}
+
+.iconsSM-twitter {
+  text-decoration: none;
+  color: pink;
+  font-size: 25px;
+}
+
+.iconsSM-twitter:hover {
+  font-size: 40px;
 }
 
 .footerText {
